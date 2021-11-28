@@ -1,0 +1,10 @@
+[user]
+	email = 70489677+rafal06@users.noreply.github.com
+	name = Rafał Baran
+[core]
+	editor = flatpak run --file-forwarding re.sonny.Commit @@
+[init]
+	defaultBranch = main
+[credential]
+	credentialStore = secretservice
+	helper = store
