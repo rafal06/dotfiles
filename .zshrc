@@ -103,9 +103,8 @@ fi
 # users are encouraged to define aliases within the ZSH_CUSTOM folder.
 # For a full list of active aliases, run `alias`.
 #
-# Example aliases
-# alias zshconfig="mate ~/.zshrc"
-# alias ohmyzsh="mate ~/.oh-my-zsh"
+# Aliases
+alias zshrc="nano ~/.zshrc"
 alias neofetch="echo 'This copy of Fedora in not activated. Go to Settings to activate Fedora.' && neofetch"
 alias la="ls -A"
 alias ll="ls -l"
