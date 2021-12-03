@@ -110,6 +110,11 @@ alias neofetch="echo 'This copy of Fedora in not activated. Go to Settings to ac
 alias la="ls -A"
 alias ll="ls -l"
 alias lla="ls -l -A"
+alias sdnfi="sudo dnf install"
+alias dnfi="dnf install"
+alias dnfs="dnf search"
+alias sdnfu="sudo dnf upgrade"
+alias dnfu="dnf upgrade"
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
