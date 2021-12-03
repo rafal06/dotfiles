@@ -114,6 +114,7 @@ alias dnfi="dnf install"
 alias dnfs="dnf search"
 alias sdnfu="sudo dnf upgrade"
 alias dnfu="dnf upgrade"
+alias rmr="rm -r"
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
