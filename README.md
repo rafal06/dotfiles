@@ -1,11 +1,11 @@
 # Dotfiles
-My Linux dotfiles. Currently only for zsh and git.
+My Linux dotfiles. Currently only for zsh, git and neofetch.
 
 ## Zsh
 ### Theme ([powerlevel10k](https://github.com/romkatv/powerlevel10k))
 ![terminal screenshot](https://cdn.discordapp.com/attachments/791628533339521031/914537302703878174/terminal.png)
 
-## Aliases
+### Aliases
 - `zshrc` -> `nano ~/.zshrc`
 - `la` -> `ls -A`
 - `ll` -> `ls -l`
@@ -16,3 +16,13 @@ My Linux dotfiles. Currently only for zsh and git.
 - `sdnfu` -> `sudo dnf upgrade`
 - `dnfu` -> `dnf upgrade`
 - `rmr` -> `rm -r`
+
+## Neofetch
+![neofetch screenshot](https://cdn.discordapp.com/attachments/791628533339521031/917507767521132594/neofetch.png)
+*Note: the "activation" text is made using a zsh alias and is just for trolling purporses :trollface:*
+
+### Changes over the default config
+- Added display framerate
+- Added CPU temperature
+- CPU frequency now displays in a shorter form (for example 4.1GHz instead of 4.100GHz)
+- Memory usage now displays in GiB instead of MiB
