@@ -34,6 +34,10 @@ echo 'Linking .gitconfig'
 mv ~/.gitconfig ~/.gitconfig.old
 link ./.gitconfig ~/.gitconfig
 
+echo 'Linking neofetch config'
+mv ~/.config/neofetch/config.conf ~/.config/neofetch/config.conf.old
+link ./neofetch/config.conf ~/.config/neofetch/config.conf
+
 # set zsh as default shell
 echo 'Setting ZSH as default shell'
 chsh -s $(which zsh)
