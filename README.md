@@ -15,3 +15,4 @@ My Linux dotfiles. Currently only for zsh and git.
 - `dnfs` -> `dnf search`
 - `sdnfu` -> `sudo dnf upgrade`
 - `dnfu` -> `dnf upgrade`
+- `rmr` -> `rm -r`
