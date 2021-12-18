@@ -105,7 +105,6 @@ fi
 #
 # Aliases
 alias zshrc="nano ~/.zshrc"
-alias neofetch="echo 'This copy of Fedora in not activated. Go to Settings to activate Fedora.' && neofetch"
 alias la="ls -A"
 alias ll="ls -l"
 alias lla="ls -l -A"
@@ -115,6 +114,15 @@ alias dnfs="dnf search"
 alias sdnfu="sudo dnf upgrade"
 alias dnfu="dnf upgrade"
 alias rmr="rm -r"
+
+# Neofetch activation text
+if [ -f /etc/os-release ]; then
+    . /etc/os-release
+    os=$(echo $NAME | awk '{print $1;}')
+else
+    os=$(uname -o)
+fi
+alias neofetch="echo 'This copy of' $os 'is not activated. Go to Settings to activate' $os'.' && neofetch"
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
