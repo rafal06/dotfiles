@@ -7,6 +7,7 @@ My Linux dotfiles. Currently only for zsh, git and neofetch.
 
 ### Aliases
 - `zshrc` -> `nano ~/.zshrc`
+- `i3config` -> `nano ~/.config/i3/config`
 - `la` -> `ls -A`
 - `ll` -> `ls -l`
 - `lla` -> `ls -l -A`
