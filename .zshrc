@@ -105,6 +105,7 @@ fi
 #
 # Aliases
 alias zshrc="nano ~/.zshrc"
+alias i3config="nano ~/.config/i3/config"
 alias la="ls -A"
 alias ll="ls -l"
 alias lla="ls -l -A"
