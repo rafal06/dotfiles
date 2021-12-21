@@ -115,6 +115,7 @@ alias dnfs="dnf search"
 alias sdnfu="sudo dnf upgrade"
 alias dnfu="dnf upgrade"
 alias rmr="rm -r"
+alias xampp='cd /opt/lampp && sudo ./manager-linux-x64.run'
 
 # Neofetch activation text
 if [ -f /etc/os-release ]; then
