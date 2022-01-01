@@ -109,14 +109,16 @@ alias i3config="nano ~/.config/i3/config"
 alias la="ls -A"
 alias ll="ls -l"
 alias lla="ls -l -A"
-alias sdnfi="sudo dnf install"
-alias dnfi="dnf install"
-alias dnfs="dnf search"
-alias sdnfu="sudo dnf upgrade"
-alias dnfu="dnf upgrade"
 alias rmr="rm -r"
 alias xampp='cd /opt/lampp && sudo ./manager-linux-x64.run'
 alias mysqlx='mysql -S /opt/lampp/var/mysql/mysql.sock'
+
+# Dnf aliases
+alias sdnfi="sudo dnf install"
+alias dnfs="dnf search"
+alias sdnfu="sudo dnf upgrade"
+alias sdnfr="sudo dnf remove"
+alias dnfli="dnf list --installed"
 
 # Neofetch activation text
 if [ -f /etc/os-release ]; then
