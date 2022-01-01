@@ -7,9 +7,16 @@ then
     exit
 fi
 
-# install the fonts
-echo 'Please install and set the required fonts.'
-echo 'https://github.com/romkatv/powerlevel10k#manual-font-installation'
+# Download and install required fonts for the zsh theme
+echo 'Installing fonts...'
+mkdir ~/.local/share/fonts -p # Make this directory only if it doesn't exist already
+wget --show-progress -q -P ~/.local/share/fonts/ https://github.com/romkatv/powerlevel10k-media/raw/master/MesloLGS%20NF%20Regular.ttf
+wget --show-progress -q -P ~/.local/share/fonts/ https://github.com/romkatv/powerlevel10k-media/raw/master/MesloLGS%20NF%20Bold.ttf
+wget --show-progress -q -P ~/.local/share/fonts/ https://github.com/romkatv/powerlevel10k-media/raw/master/MesloLGS%20NF%20Italic.ttf
+wget --show-progress -q -P ~/.local/share/fonts/ https://github.com/romkatv/powerlevel10k-media/raw/master/MesloLGS%20NF%20Bold%20Italic.ttf
+# --show-progress shows progress bar
+# -q turn off output
+fc-cache -f	# Refresh font cache
 
 # install oh-my-zsh and powerlevel10k
 read -p "Do you want to install oh-my-zsh and powerlevel10k? *Required for the theme* (y/n) " -n 1;
