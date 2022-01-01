@@ -24,19 +24,19 @@ fi;
 # link the dotfiles
 echo 'Linking .zshrc'
 mv ~/.zshrc ~/.zshrc.old
-link ./.zshrc ~/.zshrc
+ln ./.zshrc ~/.zshrc
 
 echo 'Linking .p10k.zsh'
 mv ~/.p10k.zsh ~/.p10k.zsh.old
-link ./.p10k.zsh ~/.p10k.zsh
+ln ./.p10k.zsh ~/.p10k.zsh
 
 echo 'Linking .gitconfig'
 mv ~/.gitconfig ~/.gitconfig.old
-link ./.gitconfig ~/.gitconfig
+ln ./.gitconfig ~/.gitconfig
 
 echo 'Linking neofetch config'
 mv ~/.config/neofetch/config.conf ~/.config/neofetch/config.conf.old
-link ./neofetch/config.conf ~/.config/neofetch/config.conf
+ln ./neofetch/config.conf ~/.config/neofetch/config.conf
 
 # set zsh as default shell
 echo 'Setting ZSH as default shell'
