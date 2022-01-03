@@ -6,17 +6,20 @@ My Linux dotfiles. Currently only for zsh, git and neofetch.
 ![terminal screenshot](https://cdn.discordapp.com/attachments/791628533339521031/914537302703878174/terminal.png)
 
 ### Aliases
+#### General
 - `zshrc` -> `nano ~/.zshrc`
 - `i3config` -> `nano ~/.config/i3/config`
 - `la` -> `ls -A`
 - `ll` -> `ls -l`
 - `lla` -> `ls -l -A`
+- `rmr` -> `rm -r`
+
+#### Dnf
 - `sdnfi` -> `sudo dnf install`
-- `dnfi` -> `dnf install`
 - `dnfs` -> `dnf search`
 - `sdnfu` -> `sudo dnf upgrade`
-- `dnfu` -> `dnf upgrade`
-- `rmr` -> `rm -r`
+- `sdnfr` -> `sudo dnf remove`
+- `dnfli` -> `dnf list --installed`
 
 ## Neofetch
 ![neofetch screenshot](https://cdn.discordapp.com/attachments/791628533339521031/917507767521132594/neofetch.png)
