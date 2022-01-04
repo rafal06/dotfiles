@@ -19,10 +19,13 @@ wget --show-progress -q -P ~/.local/share/fonts/ https://github.com/romkatv/powe
 fc-cache -f	# Refresh font cache
 
 # install oh-my-zsh and powerlevel10k
-read -p "Do you want to install oh-my-zsh and powerlevel10k? *Required for the theme* (y/n) " -n 1;
+read -p "Do you want to install oh-my-zsh, theme and plugins? (y/N) " -n 1;
 echo "";
 if [[ $REPLY =~ ^[Yy]$ ]]; then
+	echo 'Installing oh-my-zsh'
 	sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh )";
+
+	echo 'Installing powerlevel10k'
 	git clone --depth=1  https://github.com/romkatv/powerlevel10k.git ${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/themes/powerlevel10k;
 fi;
 
