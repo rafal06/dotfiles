@@ -120,6 +120,13 @@ alias sdnfu="sudo dnf upgrade"
 alias sdnfr="sudo dnf remove"
 alias dnfli="dnf list --installed"
 
+# Flatpak aliases
+alias fp="flatpak"
+alias fpi="flatpak install"
+alias fpr="flatpak remove"
+alias fpu="flatpak update"
+alias fps="flatpak search"
+
 # Neofetch activation text
 if [ -f /etc/os-release ]; then
     . /etc/os-release
