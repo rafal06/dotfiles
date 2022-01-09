@@ -21,6 +21,13 @@ My Linux dotfiles. Currently only for zsh, git and neofetch.
 - `sdnfr` -> `sudo dnf remove`
 - `dnfli` -> `dnf list --installed`
 
+#### Flatpak
+- `fp` -> `flatpak`
+- `fpi` -> `flatpak install`
+- `fpr` -> `flatpak remove`
+- `fpu` -> `flatpak update`
+- `fps` -> `flatpak search`
+
 ## Neofetch
 ![neofetch screenshot](https://cdn.discordapp.com/attachments/791628533339521031/917507767521132594/neofetch.png)
 *Note: the "activation" text is made using a zsh alias and is just for trolling purporses :trollface:*
