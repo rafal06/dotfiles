@@ -5,6 +5,9 @@ My Linux dotfiles. Currently only for zsh, git and neofetch.
 ### Theme ([powerlevel10k](https://github.com/romkatv/powerlevel10k))
 ![terminal screenshot](https://cdn.discordapp.com/attachments/791628533339521031/914537302703878174/terminal.png)
 
+### Plugins
+- [Zsh syntax highlighting](https://github.com/zsh-users/zsh-syntax-highlighting)
+
 ### Aliases
 #### General
 - `zshrc` -> `nano ~/.zshrc`
