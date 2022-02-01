@@ -110,7 +110,7 @@ alias la="ls -A"
 alias ll="ls -l"
 alias lla="ls -l -A"
 alias rmr="rm -r"
-alias xampp='cd /opt/lampp && sudo ./manager-linux-x64.run'
+alias xampp='cd /opt/lampp && sudo ./manager-linux-x64.run && cd -'
 alias mysqlx='mysql -S /opt/lampp/var/mysql/mysql.sock'
 
 # Dnf aliases
