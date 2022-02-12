@@ -18,10 +18,14 @@ wget --show-progress -q -P ~/.local/share/fonts/ https://github.com/romkatv/powe
 # -q turn off output
 fc-cache -f	# Refresh font cache
 
-# install oh-my-zsh and powerlevel10k
-read -p "Do you want to install oh-my-zsh, theme and plugins? (y/N) " -n 1;
+# ask whether to install zsh plugins or not (default yes)
+read -p "Do you want to install oh-my-zsh, theme and plugins? (Y/n) " -n 1;
 echo "";
-if [[ $REPLY =~ ^[Yy]$ ]]; then
+if [[ $REPLY =~ ^[Nn]$ ]]; then
+	echo 'Ok, then.'
+	echo ''
+else
+	# install oh-my-zsh, powerlevel10k and plugins
 	echo 'Installing oh-my-zsh'
 	sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh )";
 
@@ -30,7 +34,7 @@ if [[ $REPLY =~ ^[Yy]$ ]]; then
 
 	echo 'Installing zsh syntax highlighting'
 	git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting
-fi;
+fi
 
 
 
