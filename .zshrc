@@ -112,6 +112,7 @@ alias lla="ls -l -A"
 alias rmr="rm -r"
 alias xampp='cd /opt/lampp && sudo ./manager-linux-x64.run && cd -'
 alias mysqlx='mysql -S /opt/lampp/var/mysql/mysql.sock'
+alias nodefetch='cd ~/Git/nodefetch && node . && cd - > /dev/null'
 
 # Dnf aliases
 alias sdnfi="sudo dnf install"
