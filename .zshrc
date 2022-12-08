@@ -104,8 +104,8 @@ fi
 # For a full list of active aliases, run `alias`.
 #
 # Aliases
-alias zshrc="nano ~/.zshrc"
-alias i3config="nano ~/.config/i3/config"
+alias zshrc="$EDITOR ~/.zshrc"
+alias i3config="$EDITOR ~/.config/i3/config"
 alias la="ls -A"
 alias ll="ls -l"
 alias lla="ls -l -A"
