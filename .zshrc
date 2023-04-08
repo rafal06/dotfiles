@@ -109,9 +109,10 @@ export HISTCONTROL="ignoredups"
 # Aliases
 alias zshrc="$EDITOR ~/.zshrc"
 alias i3config="$EDITOR ~/.config/i3/config"
-alias la="ls -A"
-alias ll="ls -l"
-alias lla="ls -l -A"
+alias ls="exa"
+alias la="ls -a"
+alias ll="ls -l --git --icons"
+alias lla="ll -a"
 alias rmr="rm -r"
 alias xampp='cd /opt/lampp && sudo ./manager-linux-x64.run && cd -'
 alias mysqlx='mysql -S /opt/lampp/var/mysql/mysql.sock'
