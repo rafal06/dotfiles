@@ -123,6 +123,11 @@ alias sdnfu="sudo dnf upgrade"
 alias sdnfr="sudo dnf remove"
 alias dnfli="dnf list --installed"
 
+# Zypper aliases
+alias szi="sudo zypper install"
+alias szr="sudo zypper remove"
+alias szu="sudo zypper update"
+
 # Flatpak aliases
 alias fp="flatpak"
 alias fpi="flatpak install"
