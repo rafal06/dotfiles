@@ -1,42 +1,28 @@
 # Dotfiles
-My Linux dotfiles. Currently only for zsh, git and neofetch.
+My Linux dotfiles. Currently only for git and zsh.
+
+## Required programs
+- git (obviously)
+- [diff-so-fancy](https://github.com/so-fancy/diff-so-fancy) - fancy looking git diff
+- [exa](https://github.com/ogham/exa) - modern ls replacement
+- [atuin](https://github.com/ellie/atuin) - magical shell history
 
 ## Zsh
 ### Theme ([powerlevel10k](https://github.com/romkatv/powerlevel10k))
-![terminal screenshot](https://cdn.discordapp.com/attachments/791628533339521031/914537302703878174/terminal.png)
+
+![terminal screenshot](https://cdn.discordapp.com/attachments/969317854635769929/1126826524906094602/image.png)
 
 ### Plugins
 - [Zsh syntax highlighting](https://github.com/zsh-users/zsh-syntax-highlighting)
 
 ### Aliases
-#### General
-- `zshrc` -> `nano ~/.zshrc`
-- `i3config` -> `nano ~/.config/i3/config`
-- `la` -> `ls -A`
-- `ll` -> `ls -l`
-- `lla` -> `ls -l -A`
+Aliases can be found in [`.zshrc`](./.zshrc). They change so frequently that I'm not gonna bother listing all of them here. Though most notable include:
+- `ls` -> `exa`
+- `tree` -> `exa --tree`
 - `rmr` -> `rm -r`
+- `dc` -> `docker compose`
+- `sctl` and `ssctl` -> `systemctl` and `sudo systemctl`
+- `dnf`, `zypper` and `flatpak` aliases
 
-#### Dnf
-- `sdnfi` -> `sudo dnf install`
-- `dnfs` -> `dnf search`
-- `sdnfu` -> `sudo dnf upgrade`
-- `sdnfr` -> `sudo dnf remove`
-- `dnfli` -> `dnf list --installed`
-
-#### Flatpak
-- `fp` -> `flatpak`
-- `fpi` -> `flatpak install`
-- `fpr` -> `flatpak remove`
-- `fpu` -> `flatpak update`
-- `fps` -> `flatpak search`
-
-## Neofetch
-![neofetch screenshot](https://cdn.discordapp.com/attachments/791628533339521031/917507767521132594/neofetch.png)
-*Note: the "activation" text is made using a zsh alias and is just for trolling purporses :trollface:*
-
-### Changes over the default config
-- Added display framerate
-- Added CPU temperature
-- CPU frequency now displays in a shorter form (for example 4.1GHz instead of 4.100GHz)
-- Memory usage now displays in GiB instead of MiB
+## License
+All these dotfiles are distributed under the terms of WTFPL license (found in the [LICENSE file](./LICENSE)), which means that you can do what the fck you want with them. I don't care.
