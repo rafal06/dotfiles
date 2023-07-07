@@ -37,7 +37,6 @@ else
 fi
 
 
-
 # link the dotfiles
 echo 'Linking .zshrc'
 mv ~/.zshrc ~/.zshrc.old
@@ -50,10 +49,6 @@ ln ./.p10k.zsh ~/.p10k.zsh
 echo 'Linking .gitconfig'
 mv ~/.gitconfig ~/.gitconfig.old
 ln ./.gitconfig ~/.gitconfig
-
-echo 'Linking neofetch config'
-mv ~/.config/neofetch/config.conf ~/.config/neofetch/config.conf.old
-ln ./neofetch/config.conf ~/.config/neofetch/config.conf
 
 # set zsh as default shell
 echo 'Setting ZSH as default shell'

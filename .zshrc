@@ -141,15 +141,6 @@ alias fpr="flatpak remove"
 alias fpu="flatpak update"
 alias fps="flatpak search"
 
-# Neofetch activation text
-#if [ -f /etc/os-release ]; then
-#    . /etc/os-release
-#    os=$(echo $NAME | awk '{print $1;}')
-#else
-#    os=$(uname -o)
-#fi
-#alias neofetch="echo 'This copy of' $os 'is not activated. Go to Settings to activate' $os'.' && neofetch"
-
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 ZLE_RPROMPT_INDENT=0
