@@ -112,6 +112,9 @@ alias ls="exa"
 alias la="ls -a"
 alias ll="ls -l --git --icons"
 alias lla="ll -a"
+alias lltree="ll --tree"
+alias llatree="lltree -a"
+alias tree="ls --icons --tree"
 alias rmr="rm -r"
 # alias nodefetch='cd ~/Git/nodefetch && node . && cd - > /dev/null'
 
