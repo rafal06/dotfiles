@@ -108,7 +108,6 @@ export HISTCONTROL="ignoredups"
 #
 # Aliases
 alias zshrc="$EDITOR ~/.zshrc"
-alias i3config="$EDITOR ~/.config/i3/config"
 alias ls="exa"
 alias la="ls -a"
 alias ll="ls -l --git --icons"
