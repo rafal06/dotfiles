@@ -116,6 +116,10 @@ alias lltree="ll --tree"
 alias llatree="lltree -a"
 alias tree="ls --icons --tree"
 alias rmr="rm -r"
+alias cl="cd && clear"
+alias dc="docker compose"
+alias sctl="systemctl"
+alias ssctl="sudo systemctl"
 # alias nodefetch='cd ~/Git/nodefetch && node . && cd - > /dev/null'
 
 # Dnf aliases
