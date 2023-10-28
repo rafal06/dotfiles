@@ -1,44 +1,72 @@
 #!/usr/bin/env bash
 
-# check for zsh
-if ! command -v zsh &> /dev/null
-then
-    echo "Zsh couldn't be found. Please install zsh and run this script again."
-    exit
+# ----------------------
+# Check for dependencies
+
+abort=false
+
+for cmd in zsh wget git; do
+    if ! command -v $cmd &> /dev/null; then
+        echo "Critical: $cmd not found"
+        abort=true
+    fi
+done
+
+for cmd in exa atuin diff-so-fancy; do
+    if ! command -v $cmd &> /dev/null; then
+        echo "Warning: $cmd not found"
+    fi
+done
+
+if [ "$abort" = true ]; then
+    exit 1
 fi
 
+# -----------------------------------------------------
 # Download and install required fonts for the zsh theme
-echo 'Installing fonts...'
-mkdir ~/.local/share/fonts -p # Make this directory only if it doesn't exist already
-wget --show-progress -q -P ~/.local/share/fonts/ https://github.com/romkatv/powerlevel10k-media/raw/master/MesloLGS%20NF%20Regular.ttf
-wget --show-progress -q -P ~/.local/share/fonts/ https://github.com/romkatv/powerlevel10k-media/raw/master/MesloLGS%20NF%20Bold.ttf
-wget --show-progress -q -P ~/.local/share/fonts/ https://github.com/romkatv/powerlevel10k-media/raw/master/MesloLGS%20NF%20Italic.ttf
-wget --show-progress -q -P ~/.local/share/fonts/ https://github.com/romkatv/powerlevel10k-media/raw/master/MesloLGS%20NF%20Bold%20Italic.ttf
-# --show-progress shows progress bar
-# -q turn off output
-fc-cache -f	# Refresh font cache
 
-# ask whether to install zsh plugins or not (default yes)
-read -p "Do you want to install oh-my-zsh, theme and plugins? (Y/n) " -n 1;
-echo "";
-if [[ $REPLY =~ ^[Nn]$ ]]; then
-	echo 'Ok, then.'
-	echo ''
-else
-	# install oh-my-zsh, powerlevel10k and plugins
-	echo 'Installing oh-my-zsh'
-	sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh )";
+echo -e "\nInstalling fonts..."
+font_dir="$HOME/.local/share/fonts"
 
-	echo 'Installing powerlevel10k'
-	git clone --depth=1  https://github.com/romkatv/powerlevel10k.git ${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/themes/powerlevel10k;
+# Create the font directory if it doesn't exist
+mkdir -p "$font_dir"
 
-	echo 'Installing zsh syntax highlighting'
-	git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting
-fi
+font_urls=(
+    "https://github.com/romkatv/powerlevel10k-media/raw/master/MesloLGS%20NF%20Regular.ttf"
+    "https://github.com/romkatv/powerlevel10k-media/raw/master/MesloLGS%20NF%20Bold.ttf"
+    "https://github.com/romkatv/powerlevel10k-media/raw/master/MesloLGS%20NF%20Italic.ttf"
+    "https://github.com/romkatv/powerlevel10k-media/raw/master/MesloLGS%20NF%20Bold%20Italic.ttf"
+)
 
+for url in "${font_urls[@]}"; do
+	# Quiet with progress bar
+    wget --show-progress -q -P "$font_dir" "$url"
+done
 
-# link the dotfiles
-echo 'Linking .zshrc'
+# Refresh the font cache
+fc-cache -f
+
+echo "Fonts installed and cache refreshed"
+
+# -------------------------------
+# Install zsh plugins and a theme
+
+echo -e "\nInstalling zsh plugins..."
+
+echo 'Installing oh-my-zsh'
+git clone -q --progress --depth=1 https://github.com/ohmyzsh/ohmyzsh.git $HOME/.oh-my-zsh
+ZSH_CUSTOM="$HOME/.oh-my-zsh/custom"
+
+echo 'Installing powerlevel10k'
+git clone -q --progress --depth=1  https://github.com/romkatv/powerlevel10k.git $ZSH_CUSTOM/themes/powerlevel10k
+
+echo 'Installing zsh syntax highlighting'
+git clone -q --progress --depth=1 https://github.com/zsh-users/zsh-syntax-highlighting.git $ZSH_CUSTOM/plugins/zsh-syntax-highlighting
+
+# -----------------
+# Link the dotfiles
+
+echo -e '\nLinking .zshrc'
 mv ~/.zshrc ~/.zshrc.old
 ln ./.zshrc ~/.zshrc
 
@@ -50,8 +78,7 @@ echo 'Linking .gitconfig'
 mv ~/.gitconfig ~/.gitconfig.old
 ln ./.gitconfig ~/.gitconfig
 
-# set zsh as default shell
-echo 'Setting ZSH as default shell'
+echo 'Setting zsh as default shell'
 chsh -s $(which zsh)
 
-echo 'Done'
+echo -e '\nDone'
