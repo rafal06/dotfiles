@@ -109,7 +109,7 @@ export HISTCONTROL="ignoredups"
 #
 # Aliases
 alias zshrc="$EDITOR ~/.zshrc"
-alias ls="exa"
+alias ls="eza"
 alias la="ls -a"
 alias ll="ls -l --git --icons"
 alias lla="ll -a"
@@ -121,7 +121,6 @@ alias cl="cd && clear"
 alias dc="docker compose"
 alias sctl="systemctl"
 alias ssctl="sudo systemctl"
-# alias nodefetch='cd ~/Git/nodefetch && node . && cd - > /dev/null'
 
 # Dnf aliases
 alias sdnfi="sudo dnf install"

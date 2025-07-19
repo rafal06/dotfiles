@@ -3,9 +3,12 @@ My Linux dotfiles. Currently only for git and zsh.
 
 ## Required programs
 - git (obviously)
+- zsh
+- [micro](https://github.com/zyedidia/micro) - modern and intuitive terminal-based text editor
 - [diff-so-fancy](https://github.com/so-fancy/diff-so-fancy) - fancy looking git diff
-- [exa](https://github.com/ogham/exa) - modern ls replacement
+- [eza](https://github.com/eza-community/eza) - modern ls replacement
 - [atuin](https://github.com/ellie/atuin) - magical shell history
+- [bat](https://github.com/sharkdp/bat) (not required, but recommended) - cat(1) clone with wings
 
 ## Zsh
 ### Theme ([powerlevel10k](https://github.com/romkatv/powerlevel10k))
@@ -17,8 +20,8 @@ My Linux dotfiles. Currently only for git and zsh.
 
 ### Aliases
 Aliases can be found in [`.zshrc`](./.zshrc). They change so frequently that I'm not gonna bother listing all of them here. Though most notable include:
-- `ls` -> `exa`
-- `tree` -> `exa --tree`
+- `ls` -> `eza`
+- `tree` -> `eza --tree`
 - `rmr` -> `rm -r`
 - `dc` -> `docker compose`
 - `sctl` and `ssctl` -> `systemctl` and `sudo systemctl`
